@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
+    <title>Time Zone Dropdown</title>
+</head>
+<body>
+    <div>
+        <select name="city" id="city" >
+            <option value = "" >Select a city </option>
+            <option value = "Europe/Paris">Paris</option>
+            <option value = "Arica/Johannesburg">Johannesburg</option>
+            <option value = "America/New York">New York</option>
+            
+        </select>
+    </div>
+    <script>
+        function showTime(event){
+            if (event.target.value.length > 0){
+                if(event.target.value === "Europe/Paris"){
+                    let time = moment().tz("Europe/Paris").format("dddd, MMMM DD, YYYY LTM")
+                    alert(`It is ${time} in ${event.target.value}`)
+                }
+                if(event.target.value === "Arica/Johannesburg"){
+                    let time = moment().tz("Arica/Johannesburg").format("dddd, MMMM DD, YYYY LTM")
+                    alert(`It is ${time} in ${event.target.value}`)
+                }
+                if(event.target.value === "America/New York"){
+                    let time = moment().tz("America/New York").format("dddd, MMMM DD, YYYY LTM")
+                    alert(`It is ${time} in ${event.target.value}`)
+                }
+            }
+        }
+        let selectElement =document.querySelector('#city');
+        selectElement.addEventListener('change',showTime)
+    </script>
+
+    
+</body>
+</html>
