@@ -47,14 +47,10 @@ project/
 | Johannesburg | Africa/Johannesburg |
 | New York | America/New_York |
 
-## 🐛 Known Issues
 
-- The Johannesburg timezone value in the code contains a typo (`Arica/Johannesburg` instead of `Africa/Johannesburg`) — this will cause it to display incorrectly until fixed.
-- New York's timezone value contains a space (`America/New York`) which is invalid — it should be `America/New_York`.
 
 ## 🔮 Future Improvements
 
-- [ ] Fix timezone typos
 - [ ] Display time on the page instead of in an alert
 - [ ] Add more cities
 - [ ] Auto-refresh the time every second

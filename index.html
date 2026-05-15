@@ -12,8 +12,8 @@
         <select name="city" id="city" >
             <option value = "" >Select a city </option>
             <option value = "Europe/Paris">Paris</option>
-            <option value = "Arica/Johannesburg">Johannesburg</option>
-            <option value = "America/New York">New York</option>
+            <option value = "Africa/Johannesburg">Johannesburg</option>
+            <option value = "America/New_York">New York</option>
             
         </select>
     </div>
@@ -24,12 +24,12 @@
                     let time = moment().tz("Europe/Paris").format("dddd, MMMM DD, YYYY LTM")
                     alert(`It is ${time} in ${event.target.value}`)
                 }
-                if(event.target.value === "Arica/Johannesburg"){
-                    let time = moment().tz("Arica/Johannesburg").format("dddd, MMMM DD, YYYY LTM")
+                if(event.target.value === "Africa/Johannesburg"){
+                    let time = moment().tz("Africa/Johannesburg").format("dddd, MMMM DD, YYYY LTM")
                     alert(`It is ${time} in ${event.target.value}`)
                 }
-                if(event.target.value === "America/New York"){
-                    let time = moment().tz("America/New York").format("dddd, MMMM DD, YYYY LTM")
+                if(event.target.value === "America/New_York"){
+                    let time = moment().tz("America/New_York").format("dddd, MMMM DD, YYYY LTM")
                     alert(`It is ${time} in ${event.target.value}`)
                 }
             }
